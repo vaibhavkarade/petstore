@@ -16,7 +16,7 @@ spec:
       - name: petshop
         image: vaibhavkarade/petshop:latest
         ports:
-        - containerPort: 8000
+        - containerPort: 8080
         imagePullPolicy: Always
 ---
 apiVersion: v1
@@ -31,5 +31,5 @@ spec:
   - name: http
     protocol: TCP
     port: 80
-    targetPort: 8000
+    targetPort: 8080
   type: LoadBalancer 
